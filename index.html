@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shoots by Aby 🎀</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --burgundy: #4b0711;
+    --burgundy-dark: #270308;
+    --red: #8f0d20;
+    --red-light: #b51b35;
+    --cream: #faf7f2;
+    --white: #ffffff;
+    --gold: #c8a56a;
+    --text: #351116;
+    --soft: #f2e7e5;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
+
+    background: rgba(75, 7, 17, .96);
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    z-index: 999;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    font-style: italic;
+}
+
+.logo span {
+    color: #f0b9c2;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: .5px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #e6aab3;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding-top: 75px;
+
+    background:
+        linear-gradient(
+            rgba(39,3,8,.45),
+            rgba(39,3,8,.62)
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    position: relative;
+}
+
+.hero-content {
+    max-width: 850px;
+
+    padding: 30px;
+}
+
+.hero-small {
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+
+    color: #f1d9d9;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 10vw, 125px);
+
+    line-height: .85;
+
+    font-style: italic;
+
+    font-weight: 600;
+
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 27px;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.4;
+}
+
+.hero-buttons {
+    margin-top: 38px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+}
+
+.btn-primary {
+    background: white;
+
+    color: var(--burgundy);
+}
+
+.btn-primary:hover {
+    background: #eee;
+
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid white;
+
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+
+    color: var(--burgundy);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+    padding: 100px 7%;
+
+    background: var(--cream);
+
+    text-align: center;
+}
+
+.section-label {
+    color: var(--red);
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 6vw, 70px);
+
+    font-weight: 600;
+
+    color: var(--burgundy);
+
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    line-height: 1.6;
+
+    color: #68454b;
+}
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio {
+    padding: 100px 7%;
+
+    background: var(--white);
+}
+
+.portfolio-header {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.gallery {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #ddd;
+
+    aspect-ratio: 4 / 5;
+}
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(8) {
+    aspect-ratio: 4 / 6;
+}
+
+.gallery-item img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .7s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        transparent 50%,
+        rgba(39,3,8,.75)
+    );
+
+    opacity: 0;
+
+    transition: .4s;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 25px;
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(20,0,4,.94);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90vw;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+
+    top: 25px;
+
+    right: 35px;
+
+    color: white;
+
+    font-size: 38px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TARIFS
+========================================================= */
+
+.tarifs {
+    padding: 110px 7%;
+
+    background: var(--burgundy);
+
+    color: white;
+}
+
+.tarifs .section-title {
+    color: white;
+}
+
+.tarifs-header {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.tarifs-header .section-label {
+    color: #e7b4bc;
+}
+
+.pricing {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.price-card {
+    background: var(--cream);
+
+    color: var(--text);
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    border: 1px solid rgba(200,165,106,.4);
+
+    transition: .3s;
+}
+
+.price-card:hover {
+    transform: translateY(-7px);
+}
+
+.price-card::before {
+    content: "🎀";
+
+    position: absolute;
+
+    top: -17px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: var(--cream);
+
+    padding: 3px 12px;
+
+    font-size: 19px;
+}
+
+.price-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 31px;
+
+    color: var(--red);
+
+    margin-bottom: 15px;
+}
+
+.price {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 44px;
+
+    font-weight: 600;
+
+    color: var(--burgundy);
+}
+
+.price small {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESERVATIONS
+========================================================= */
+
+.reservation {
+    padding: 110px 7%;
+
+    background: var(--soft);
+}
+
+.reservation-container {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.reservation-header {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.reservation-header p {
+    max-width: 600px;
+
+    margin: 20px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    color: #68454b;
+}
+
+.reservation-form {
+    background: var(--cream);
+
+    padding: 50px;
+
+    box-shadow: 0 20px 60px rgba(39,3,8,.12);
+
+    border: 1px solid rgba(143,13,32,.18);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 9px;
+
+    color: var(--burgundy);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d8c2c5;
+
+    background: white;
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--red);
+
+    box-shadow: 0 0 0 3px rgba(143,13,32,.08);
+}
+
+.reservation-button {
+    grid-column: 1 / -1;
+
+    height: 55px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    background: var(--red);
+
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.reservation-button:hover {
+    background: var(--burgundy-dark);
+
+    transform: translateY(-2px);
+}
+
+.reservation-button span {
+    margin-left: 10px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    padding: 110px 7%;
+
+    background: var(--cream);
+
+    text-align: center;
+}
+
+.contact-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    border: 1px solid rgba(143,13,32,.25);
+
+    padding: 65px 30px;
+
+    position: relative;
+}
+
+.contact-card::before {
+    content: "✦";
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 25px;
+}
+
+.contact-card::after {
+    content: "✦";
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+    position: absolute;
+
+    bottom: 20px;
+
+    right: 25px;
+}
+
+.contact-card h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 58px;
+
+    color: var(--burgundy);
+
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    line-height: 1.8;
+
+    color: #593239;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--burgundy-dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+.footer-logo {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 34px;
+
+    font-style: italic;
+
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    color: #dcbcc1;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+}
+
+.footer-copy {
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    color: #9e7379;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--burgundy);
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        gap: 22px;
+
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero p {
+        font-size: 21px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation-form {
+        grid-template-columns: 1fr;
+
+        padding: 30px 20px;
+    }
+
+    .reservation-button {
+        grid-column: 1;
+    }
+
+    .contact-card h2 {
+        font-size: 45px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ======================================================
+     NAVIGATION
+======================================================= -->
+
+<nav class="navbar">
+
+    <a href="#accueil" class="logo">
+        Shoots by Aby <span>🎀</span>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#accueil">
+                Accueil
+            </a>
+        </li>
+
+        <li>
+            <a href="#portfolio">
+                Portfolio
+            </a>
+        </li>
+
+        <li>
+            <a href="#tarifs">
+                Tarifs
+            </a>
+        </li>
+
+        <li>
+            <a href="#reservations">
+                Réservations
+            </a>
+        </li>
+
+        <li>
+            <a href="#contact">
+                Contact
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ======================================================
+     HERO
+======================================================= -->
+
+<section class="hero" id="accueil">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Photographie • Portrait • Événements
+        </div>
+
+        <h1>
+            Shoots by Aby 🎀
+        </h1>
+
+        <p>
+            Capturer vos moments avec douceur et élégance
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#portfolio" class="btn btn-primary">
+                DÉCOUVRIR LE PORTFOLIO
+            </a>
+
+            <a href="#reservations" class="btn btn-outline">
+                RÉSERVER
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     INTRO
+======================================================= -->
+
+<section class="intro">
+
+    <div class="section-label">
+        Bienvenue
+    </div>
+
+    <h2 class="section-title">
+        Des moments qui restent.
+    </h2>
+
+    <p class="intro-text">
+        Shoots by Aby capture vos plus beaux instants
+        avec une approche naturelle, élégante et authentique.
+    </p>
+
+</section>
+
+
+<!-- ======================================================
+     PORTFOLIO
+======================================================= -->
+
+<section class="portfolio" id="portfolio">
+
+    <div class="portfolio-header">
+
+        <div class="section-label">
+            Galerie
+        </div>
+
+        <h2 class="section-title">
+            Portfolio
+        </h2>
+
+        <p class="intro-text">
+            Découvrez quelques-uns des moments capturés
+            par Shoots by Aby.
+        </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+
+        <!-- PHOTO 1 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo1.jpg')"
+        >
+
+            <img
+                src="photo1.JPG"
+                alt="Shoots by Aby - Photo 1"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo2.jpg')"
+        >
+
+            <img
+                src="photo2.JPG"
+                alt="Shoots by Aby - Photo 2"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo3.jpg')"
+        >
+
+            <img
+                src="photo3.JPG"
+                alt="Shoots by Aby - Photo 3"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 4 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo4.jpg')"
+        >
+
+            <img
+                src="photo4.JPG"
+                alt="Shoots by Aby - Photo 4"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 5 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo5.jpg')"
+        >
+
+            <img
+                src="photo5.JPG"
+                alt="Shoots by Aby - Photo 5"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 6 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo6.jpg')"
+        >
+
+            <img
+                src="photo6.JPG"
+                alt="Shoots by Aby - Photo 6"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 7 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo7.jpg')"
+        >
+
+            <img
+                src="photo7.JPG"
+                alt="Shoots by Aby - Photo 7"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 8 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo8.jpg')"
+        >
+
+            <img
+                src="photo8.JPG"
+                alt="Shoots by Aby - Photo 8"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 9 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo9.jpg')"
+        >
+
+            <img
+                src="photo9.JPG"
+                alt="Shoots by Aby - Photo 9"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 10 -->
+
+        <div
+            class="gallery-item"
+            onclick="openImage('photo10.jpg')"
+        >
+
+            <img
+                src="photo10.JPG"
+                alt="Shoots by Aby - Photo 10"
+            >
+
+            <div class="gallery-overlay">
+                Shoots by Aby 🎀
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TARIFS
+======================================================= -->
+
+<section class="tarifs" id="tarifs">
+
+    <div class="tarifs-header">
+
+        <div class="section-label">
+            Nos offres
+        </div>
+
+        <h2 class="section-title">
+            Tarifs
+        </h2>
+
+    </div>
+
+
+    <div class="pricing">
+
+
+        <div class="price-card">
+
+            <h3>
+                5 photos
+            </h3>
+
+            <div class="price">
+                3.000 <small>FCFA</small>
+            </div>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                5 photos + vidéo
+            </h3>
+
+            <div class="price">
+                5.000 <small>FCFA</small>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     RÉSERVATIONS
+======================================================= -->
+
+<section
+    class="reservation"
+    id="reservations"
+>
+
+    <div class="reservation-container">
+
+
+        <div class="reservation-header">
+
+            <div class="section-label">
+                Prenez rendez-vous
+            </div>
+
+            <h2 class="section-title">
+                Réservations
+            </h2>
+
+            <p>
+                Choisissez votre formule, votre date et
+                l'heure souhaitée. Votre demande sera
+                ensuite envoyée directement sur WhatsApp.
+            </p>
+
+        </div>
+
+
+        <form
+            id="reservationForm"
+            class="reservation-form"
+        >
+
+
+            <!-- FORMULE -->
+
+            <div class="form-group">
+
+                <label for="formule">
+                    Formule
+                </label>
+
+                <select
+                    id="formule"
+                    required
+                >
+
+                    <option value="">
+                        Choisir une formule
+                    </option>
+
+                    <option value="5 photos — 3.000 FCFA">
+                        5 photos — 3.000 FCFA
+                    </option>
+
+                    <option value="5 photos + vidéo — 5.000 FCFA">
+                        5 photos + vidéo — 5.000 FCFA
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="form-group">
+
+                <label for="date">
+                    Date souhaitée
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    required
+                >
+
+            </div>
+
+
+            <!-- HEURE -->
+
+            <div class="form-group">
+
+                <label for="heure">
+                    Heure souhaitée
+                </label>
+
+                <input
+                    type="time"
+                    id="heure"
+                    required
+                >
+
+            </div>
+
+
+            <!-- NOM -->
+
+            <div class="form-group">
+
+                <label for="nom">
+                    Votre nom
+                </label>
+
+                <input
+                    type="text"
+                    id="nom"
+                    placeholder="Ex : Aby Diop"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BOUTON WHATSAPP -->
+
+            <button
+                type="submit"
+                class="reservation-button"
+            >
+
+                RÉSERVER SUR WHATSAPP
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+======================================================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <div class="contact-card">
+
+        <div class="section-label">
+            Contact
+        </div>
+
+        <h2>
+            Shoots by Aby 🎀
+        </h2>
+
+        <div class="contact-info">
+
+            📞 77 185 11 98
+
+            <br>
+
+            📍 Diamaguene, Cité millionnaire
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Shoots by Aby 🎀
+    </div>
+
+    <div class="footer-text">
+        Naturel. Authentique.
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Shoots by Aby — Tous droits réservés.
+    </div>
+
+</footer>
+
+
+<!-- ======================================================
+     LIGHTBOX
+======================================================= -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+>
+
+    <span
+        class="close"
+        onclick="closeImage()"
+    >
+        ×
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Photo Shoots by Aby"
+    >
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+======================================================= -->
+
+<script>
+
+
+/* ======================================================
+   MENU MOBILE
+======================================================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
+}
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            document
+                .getElementById("navLinks")
+                .classList.remove("active");
+
+        });
+
+    });
+
+
+/* ======================================================
+   LIGHTBOX
+======================================================= */
+
+function openImage(image) {
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    lightboxImage.src = image;
+
+    lightbox.classList.add("active");
+
+}
+
+
+function closeImage() {
+
+    document
+        .getElementById("lightbox")
+        .classList.remove("active");
+
+}
+
+
+document
+    .getElementById("lightbox")
+    .addEventListener("click", function(event) {
+
+        if (event.target === this) {
+
+            closeImage();
+
+        }
+
+    });
+
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        closeImage();
+
+    }
+
+});
+
+
+/* ======================================================
+   RÉSERVATION WHATSAPP
+======================================================= */
+
+document
+    .getElementById("reservationForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const nom =
+            document
+                .getElementById("nom")
+                .value
+                .trim();
+
+
+        const formule =
+            document
+                .getElementById("formule")
+                .value;
+
+
+        const date =
+            document
+                .getElementById("date")
+                .value;
+
+
+        const heure =
+            document
+                .getElementById("heure")
+                .value;
+
+
+        /* Vérification */
+
+        if (
+            !nom ||
+            !formule ||
+            !date ||
+            !heure
+        ) {
+
+            alert(
+                "Veuillez remplir tous les champs."
+            );
+
+            return;
+
+        }
+
+
+        /* Format de la date */
+
+        const dateObj =
+            new Date(
+                date + "T00:00:00"
+            );
+
+
+        const dateFormatee =
+            dateObj.toLocaleDateString(
+                "fr-FR",
+                {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "numeric"
+                }
+            );
+
+
+        /* Message WhatsApp */
+
+        const message =
+`Bonjour Shoots by Aby 🎀
+
+Je souhaite réserver une séance photo.
+
+👤 Nom : ${nom}
+
+📸 Formule :
+${formule}
+
+📅 Date souhaitée :
+${dateFormatee}
+
+🕐 Heure souhaitée :
+${heure}
+
+Merci ✨`;
+
+
+        /* Numéro WhatsApp */
+
+        const numero =
+            "221771851198";
+
+
+        /* Création du lien */
+
+        const whatsappURL =
+            "https://wa.me/" +
+            numero +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+        /* Ouverture WhatsApp */
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+
+</script>
+
+</body>
+</html>
